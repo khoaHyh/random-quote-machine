@@ -13,14 +13,18 @@ class App extends Component {
   }
 
   async componentDidMount() {
-    const url = "https://type.fit/api/quotes";
-    const response = await fetch(url);
-    const data = await response.json();
-    let randomIndex = Math.round(Math.random() * (data.length - 1));
-    this.setState({
-      quote: data[randomIndex].text,
-      author: data[randomIndex].author
-    });
+    try {
+      const url = "https://type.fit/api/quotes";
+      const response = await fetch(url);
+      const data = await response.json();
+      let randomIndex = Math.round(Math.random() * (data.length - 1));
+      this.setState({
+        quote: data[randomIndex].text,
+        author: data[randomIndex].author
+      });
+    } catch(err) {
+      console.log(`error: ${err}`);
+    }
   }
 
   render() {
