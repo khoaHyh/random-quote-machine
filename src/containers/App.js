@@ -37,7 +37,7 @@ class App extends Component {
           <div id="text">{quote}</div>
           <div id="author">{author}</div>
           <div className="buttons">
-            <a id="tweet-quote" href="twitter.com/intent/tweet" target="_blank" rel="noreferrer noopener">Tweet Quote button</a>
+            <a id="tweet-quote" href="https://twitter.com/intent/tweet" target="_blank" rel="noreferrer noopener">Tweet Quote button</a>
             <button id="new-quote" onClick={this.generateRandomQuote}>New Quote</button>
           </div>
         </div>
