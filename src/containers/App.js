@@ -10,9 +10,10 @@ class App extends Component {
       author: '',
       newQuote: false
     }
+    this.generateRandomQuote = this.generateRandomQuote.bind(this);
   }
 
-  async componentDidMount() {
+  generateRandomQuote = async() => {
     try {
       const url = "https://type.fit/api/quotes";
       const response = await fetch(url);
@@ -37,7 +38,7 @@ class App extends Component {
           <div id="author">{author}</div>
           <div className="buttons">
             <a id="tweet-quote" href="twitter.com/intent/tweet" target="_blank" rel="noreferrer noopener">Tweet Quote button</a>
-            <div id="new-quote">New Quote button</div>
+            <button id="new-quote" onClick={this.generateRandomQuote}>New Quote</button>
           </div>
         </div>
       </div>
