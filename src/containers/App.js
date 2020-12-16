@@ -13,6 +13,10 @@ class App extends Component {
     this.generateRandomQuote = this.generateRandomQuote.bind(this);
   }
 
+  async componentDidMount() {
+    this.generateRandomQuote();
+  }
+
   generateRandomQuote = async() => {
     try {
       const url = "https://type.fit/api/quotes";
