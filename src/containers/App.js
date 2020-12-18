@@ -33,7 +33,7 @@ const App = () => {
         <div id="text">{quote}</div>
         <div id="author">{author}</div>
         <div className="buttons">
-          <a id="tweet-quote" href="https://twitter.com/intent/tweet" target="_blank" rel="noreferrer noopener">Tweet Quote</a>
+          <a id="tweet-quote" href={`https://twitter.com/intent/tweet?text=${quote}--${author}`} target="_blank" rel="noreferrer noopener">Tweet Quote</a>
           <button id="new-quote" onClick={generateRandomQuote}>New Quote</button>
         </div>
       </div>
