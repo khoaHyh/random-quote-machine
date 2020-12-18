@@ -1,5 +1,7 @@
 #quote-box {
-  border: solid 1px magenta;
+  border: solid 3px magenta;
+  border-radius: 0.5rem;
+  background-color: #e5e5e5;
   padding: 1rem;
   width: 70vw;
   height: 40vh;
@@ -28,4 +30,35 @@
 .buttons {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+
+#new-quote, #tweet-quote {
+  cursor: pointer;
+}
+
+#tweet-quote {
+  text-decoration: none;
+  text-align:center;
+  font-size: 0.9rem;
+  border: solid 1px grey;
+  border-radius: 0.2rem;
+  padding: 0.25rem 1rem;
+  background-color: cyan;
+  color: black;
+  transition: all 0.3s ease-in-out;
+}
+
+#tweet-quote:hover {
+  background-color: white;
+  color: cyan;
+}
+
+button {
+  transition: color 0.3s ease-in-out;
+}
+
+button:hover {
+  color: black;
+  font-weight: bold;
 }
